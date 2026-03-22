@@ -1,0 +1,52 @@
+{
+  "name": "cloud-optimization-dashboard",
+  "version": "1.0.0",
+  "description": "Cloud Cost Optimization Dashboard - Frontend",
+  "private": true,
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.6.5",
+    "dotenv": "^17.3.1",
+    "framer-motion": "^12.35.1",
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^6.20.0",
+    "recharts": "^2.10.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/types": "^7.29.0",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "vite": "^4.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "dev": "node --no-warnings ./node_modules/vite/bin/vite.js",
+    "build": "node --no-warnings ./node_modules/vite/bin/vite.js build",
+    "preview": "node --no-warnings ./node_modules/vite/bin/vite.js preview"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:8000"
+}

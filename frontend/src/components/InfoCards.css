@@ -1,0 +1,11 @@
+.status-text-critical {
+    color: #dc2626;
+}
+
+.status-text-warning {
+    color: #ea580c;
+}
+
+.status-text-healthy {
+    color: #16a34a;
+}

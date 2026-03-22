@@ -1,0 +1,21 @@
+.storage-critical {
+    background-color: #dc2626;
+}
+
+.storage-warning {
+    background-color: #ea580c;
+}
+
+.storage-moderate {
+    background-color: #eab308;
+}
+
+.storage-healthy {
+    background-color: #22c55e;
+}
+
+.storage-progress-bar {
+    height: 100%;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}

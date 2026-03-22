@@ -1,0 +1,91 @@
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 0px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.stat-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Faster hover response but smooth easing */
+    transition: transform 0.18s ease-out, box-shadow 0.22s ease-out;
+    will-change: transform, box-shadow;
+    cursor: default;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.stat-card-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-card-icon {
+    font-size: 1.5rem;
+    opacity: 1;
+}
+
+.stat-card-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.stat-card-subtext {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+/* Accent top border for identification */
+.stat-card-blue {
+    border-top: 3px solid #00f3ff;
+}
+
+.stat-card-green {
+    border-top: 3px solid #39ff14;
+}
+
+.stat-card-yellow {
+    border-top: 3px solid #ccff00;
+}
+
+.stat-card-purple {
+    border-top: 3px solid #bf00ff;
+}
+
+/* Status Text overrides */
+.status-text-critical {
+    color: #ef4444 !important;
+}
+
+.status-text-warning {
+    color: #f97316 !important;
+}
+
+.status-text-healthy {
+    color: #10b981 !important;
+}

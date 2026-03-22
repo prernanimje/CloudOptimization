@@ -1,0 +1,119 @@
+.upload-page-container {
+    background-color: var(--bg-app);
+    min-height: 100vh;
+}
+
+.upload-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 32px 0 24px 0;
+}
+
+.upload-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.upload-subtitle {
+    color: var(--text-secondary);
+}
+
+.upload-content {
+    max-width: 96rem;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.upload-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.upload-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.upload-dropzone {
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 48px;
+    text-align: center;
+    transition: all 0.2s ease;
+    background-color: var(--bg-app);
+}
+
+.upload-dropzone.active {
+    border-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.upload-dropzone:hover {
+    border-color: var(--text-secondary);
+}
+
+.upload-text-muted {
+    color: var(--text-secondary);
+}
+
+.upload-text-strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Format Guide Specifics */
+.format-guide-code {
+    background-color: var(--bg-app);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.format-guide-code p {
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.format-list-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.format-list-item {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+}
+
+/* Info Alert Box */
+.info-alert-box {
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.info-alert-title {
+    font-weight: 600;
+    color: #60a5fa;
+    margin-bottom: 12px;
+}
+
+.info-alert-text {
+    font-size: 0.875rem;
+    color: #93c5fd;
+    margin-bottom: 8px;
+}

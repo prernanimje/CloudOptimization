@@ -1,0 +1,58 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: cloud_opt_db
+    environment:
+      POSTGRES_USER: ${DB_USER:-admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-admin}
+      POSTGRES_DB: ${DB_NAME:-cloud_db}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U admin || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cloud_network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: cloud_opt_backend
+    environment:
+      DATABASE_URL: postgresql://admin:admin@db:5432/cloud_db
+      FRONTEND_URL: http://localhost:3000
+      DEBUG: "True"
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - cloud_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: cloud_opt_frontend
+    ports:
+      - "3000:80" # Expose Nginx on port 3000
+    depends_on:
+      - backend
+    networks:
+      - cloud_network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  cloud_network:
+    driver: bridge
