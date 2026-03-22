@@ -21,8 +21,9 @@ const Login = () => {
             await login(username, password);
             navigate('/app');
         } catch (err) {
-            setError('Failed to log in. Please check your credentials.');
-            console.error(err);
+            const errorMsg = err.response?.data?.detail || err.message || 'Failed to log in. Please check your credentials.';
+            setError(`Error: ${errorMsg}`);
+            console.error('Login error:', err);
         } finally {
             setLoading(false);
         }
